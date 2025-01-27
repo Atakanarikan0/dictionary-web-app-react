@@ -42,6 +42,7 @@ function App() {
   return (
     <div className="container" style={{ fontFamily }}>
       <header>
+        {darkMode ? <img src="/public/img/logo-dark-mode.svg" alt="" /> : <img src="/public/img/logo-white-mode.svg" alt="" /> }
         <select value={fontFamily} onChange={handleFontChange}>
           <option value="Inter">Sans Serif</option>
           <option value="Lora">Serif</option>
@@ -49,6 +50,7 @@ function App() {
         </select>
         <label onClick={handleClick}>
           <input type="checkbox" className="switch"/>
+          {darkMode ? <img src="/public/img/dark-mode-purple-icon.svg" alt="" /> : <img src="/public/img/dark-mode-icon.svg" alt="" />}
         </label>
       </header>
       <div className="form-section">
@@ -80,6 +82,7 @@ function SearchWord({ setSearchWord , word, searchWord }) {
       <form onSubmit={handleSubmit}>
         <input type="text" required className="searchInput" name="searchInput" autoComplete="off"/>
         <button>
+          <img src="/public/img/search-icon.svg" alt="" />
         </button>
       </form>
       {word && (
@@ -88,6 +91,7 @@ function SearchWord({ setSearchWord , word, searchWord }) {
             <h1 className="word">{word[0]?.word}</h1>
             <p className="phonetic">{word[0]?.phonetic}</p>
             <button className="play-audio" onClick={playAudio}>
+              <img src="/public/img/play-icon.png" alt="" />
             </button>
           </div>
           <div className="word-type noun">

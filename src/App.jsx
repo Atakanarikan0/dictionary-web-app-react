@@ -88,7 +88,6 @@ function SearchWord({ setSearchWord , word, searchWord }) {
             <h1 className="word">{word[0]?.word}</h1>
             <p className="phonetic">{word[0]?.phonetic}</p>
             <button className="play-audio" onClick={playAudio}>
-              <img src="./public/img/play-icon.png" alt="" />
             </button>
           </div>
           <div className="word-type noun">
